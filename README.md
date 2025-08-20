@@ -1,5 +1,5 @@
 # LAB-32-PPTP
-Rabu 20 Agustus 2025  
+Rabu 20 Agustus 2025   
   
 # Point to Point Tunnel Protocol  
   PPTP di Mikrotik dapat dikonfigurasi menjadi PPTP server dan PPTP client atau langsung bersamaan keduanya. Untuk melihat service PPTP ini aktif atau tidak, kita bisa cek di **system > package > PPP**.  
