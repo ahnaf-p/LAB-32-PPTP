@@ -17,6 +17,33 @@ Rabu 20 Agustus 2025
 3. Sampai disini, proses pembuatan PPTP server pada Office A sudah selesai.  
 
 # Konfigurasi PPTP Client 1
+1. Pilih tab **dial out** isi parameter:   
+   connect to: isikan ip public dari office A   
+   masukkan user dan password PPTP sever   
+   arahkan profile nya ke **default-encryption**    
+  
+![m](p2.PNG)  
+  
+2. nah secara otomatis kita akan di buatkan interface baru oleh sistem namanya **pptp-out1**.   
+dan flag nya R berarti sudah running/terkoneksi.   
+
+![m](p1.PNG)
+
+3. kita bisa lihat di address ip > address    
+   klo sudah di tambambahkan nya ip sercara otomatis dari interface **pptp-out1.**   
+
+![m](p4.PNG)
+
+4. jika sudah terkoneksi sekarang kita buat pengaturan routing supaya pengaturan antar LAN yang ada pada office A dan office B bisa saling terkoneksi melalui PPTP tunnel.
+   pilih menu ip > routes    
+   di bagian dst.address isi dengan ip office A   
+   gateway nya interface pptp-out1   
+
+![m](p3.PNG)
+
+5. coba ping ke office A lewat terminal   
+
+![m](p5.PNG)
 
 # Konfigurasi PPTP Server 2
 1. Jika client sudah selesai, kita bisa lihat di server bagian **active connecions** ada user yang sedang aktif.  
